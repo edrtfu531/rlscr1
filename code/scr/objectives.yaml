@@ -1,0 +1,31 @@
+risk_off:
+  hy_oas_dzbps:  0.35
+  vix_dz:        0.35
+  dgs10_dzbps:  -0.15
+  ust_2y_10y_dzbps: -0.05   # flattening risk-off
+  usd_lret_z:    0.05
+  wti_lret_z:   -0.05
+
+risk_on:
+  hy_oas_dzbps: -0.35
+  vix_dz:       -0.35
+  dgs10_dzbps:   0.15
+  ust_2y_10y_dzbps: 0.05    # slight steepen
+  usd_lret_z:   -0.05
+  wti_lret_z:    0.05
+
+hawkish:
+  dgs10_dzbps:   0.35
+  ust_2y_10y_dzbps: -0.25
+  usd_lret_z:    0.15
+  hy_oas_dzbps:  0.15
+  vix_dz:        0.10
+  wti_lret_z:   -0.05
+
+dovish:
+  dgs10_dzbps:  -0.35
+  ust_2y_10y_dzbps: 0.25    # bull steepen or less flattening
+  usd_lret_z:   -0.15
+  hy_oas_dzbps: -0.15
+  vix_dz:       -0.10
+  wti_lret_z:    0.05

@@ -1,0 +1,18 @@
+[
+  {
+    "run_id": 0,
+    "subset_type": "market_proxy",
+    "tickers": [
+      "XLY",
+      "XLP",
+      "XLE",
+      "XLF",
+      "XLV",
+      "XLI",
+      "XLB",
+      "XLK",
+      "XLU",
+      "SPY"
+    ]
+  }
+]
