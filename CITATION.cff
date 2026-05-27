@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this repository or its materials, please cite the associated paper."
+title: "Reinforcement Learning with Scenario-Context Rollout in Portfolio Management: Supporting Research Materials"
+type: software
+license: "PolyForm-Noncommercial-1.0.0"
+
+authors:
+  - family-names: "Bendatu"
+    given-names: "Vanya Priscillia"
+  - family-names: "Lu"
+    given-names: "Yao"
+
+repository-code: "https://github.com/edrtfu531/rlscr1"
+
+preferred-citation:
+  type: conference-paper
+  title: "Reinforcement Learning with Scenario-Context Rollout in Portfolio Management"
+  authors:
+    - family-names: "Bendatu"
+      given-names: "Vanya Priscillia"
+    - family-names: "Lu"
+      given-names: "Yao"
+  conference:
+    name: "Proceedings of the ACM SIGKDD Conference on Knowledge Discovery and Data Mining"
+  year: 2026
+  doi: "10.1145/3770855.3817999"

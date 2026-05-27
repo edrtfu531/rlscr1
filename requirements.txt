@@ -1,0 +1,12 @@
+numpy==1.23.5
+pandas==1.5.3
+scikit-learn==1.2.2
+scipy==1.10.1
+matplotlib==3.7.1
+torch==2.7.1
+gymnasium==1.1.1
+stable-baselines3==2.7.1
+networkx==3.1
+cvxpy==1.5.3
+torch-geometric==2.6.1
+transformers==4.54.1
