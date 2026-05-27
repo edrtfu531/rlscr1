@@ -1,0 +1,7 @@
+data:
+  market_dir: data/market/full_history
+  start_date: "2009-01-01"
+  test_end: "2023-12-31"
+
+output:
+  dir: code/output/experiments/

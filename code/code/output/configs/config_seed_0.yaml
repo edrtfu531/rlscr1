@@ -1,0 +1,83 @@
+data:
+  pred_rem_cs: ../../output/experiments/run_00_market_proxy/pred_rem.csv
+  pred_train_cs: ../../output/experiments/run_00_market_proxy/pred_train.csv
+  r_sim: ../../output/experiments/run_00_market_proxy/shocks_run_00_market_proxy/r_tilde_online.csv
+  simret_value_col: r_tilde_with_alpha
+  edges_rem: ../../output/experiments/run_00_market_proxy/edges_rem.csv
+  edges_train: ../../output/experiments/run_00_market_proxy/edges_train.csv
+  betas: ../../output/experiments/run_00_market_proxy/shocks_run_00_market_proxy/betas_online.csv
+  realized: ../../output/experiments/run_00_market_proxy/returns_run_00_market_proxy.csv
+  scenario_context: ../../output/experiments/run_00_market_proxy/scenarios_run_00_market_proxy_seed_0/scenario_context.csv
+
+dates:
+  train_start: 2009-05-12
+  train_end:   2017-12-31
+  val_start:   2018-01-01
+  val_end:     2019-12-31
+  test_start:  2020-01-01
+  test_end:    2023-12-31
+  
+constraints:
+  l1_budget_B: 1.0
+  box_b: 0.15
+  tau_turnover: 0.4
+  transaction_cost_gamma: 0.0005
+
+train:
+  use_rl: true
+  lr: 0.0001
+  scenarios: 64
+  roll_window: 60
+  sampler:
+    mode: knn_beta
+    k: 50
+
+graph:
+  kappa: 0.04
+
+rl:
+  use_rl: true 
+  epochs: 50
+  ppo_clip: 0.2
+  ppo_epochs: 5
+  gae_lambda: 0.8
+  turnover_penalty: 0.2
+  gamma_V: 0.94
+  laplacian_gamma: 0.3
+
+  caps:
+    l1: 1.0
+    box: 0.15
+    turnover: 0.3
+    kappa_smooth: 0.04
+
+  use_counterfactual_bootstrap: true
+  bootstrap_num_batches: 1
+  cf_build: sim_mean
+  cf_alpha: 0.25
+  beta_cf: 0.5
+
+  dro:
+    epsilon: 0.01
+    mode: entropic
+    train_eta: true
+    eta_init: 0.35
+    eta_min: 0.25
+    eta_max: 20.0
+
+  lambda_rho: 0.15
+
+
+sc2b:
+  gate_mode: scale
+  gate_k: 2.0
+  driver_how: mean
+
+output:
+  dir: ../../output/experiments/run_00_market_proxy/rl_runs_scr_ccm_seed_0
+  
+diagnostics:
+  enabled: true
+  trace_probes: 64
+
+seed: 0
